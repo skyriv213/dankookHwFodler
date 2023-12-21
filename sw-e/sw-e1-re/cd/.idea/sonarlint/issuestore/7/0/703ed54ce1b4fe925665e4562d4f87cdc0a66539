@@ -1,0 +1,16 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(õÕÓ¦ÿÿÿÿÿ
+Q	java:S125+"<This block of commented-out lines of code should be removed.(Íèò˜
+F
+java:S1068
+"0Remove this unused "productPrice" private field.(ÙËÓ½
+J
+java:S1068"/Remove this unused "productSize" private field.(ù¥í…ıÿÿÿÿ
+K
+java:S1068"0Remove this unused "productColor" private field.(ÄÂ­Éùÿÿÿÿ
+J
+java:S1068"/Remove this unused "productInfo" private field.(àªµ‚ıÿÿÿÿ
+K
+java:S1068"0Remove this unused "productStock" private field.(şº¡¸ÿÿÿÿÿ
+L
+java:S1068"1Remove this unused "productReview" private field.(µéÏÆøÿÿÿÿ

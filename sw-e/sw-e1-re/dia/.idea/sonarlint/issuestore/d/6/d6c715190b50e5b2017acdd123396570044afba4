@@ -1,0 +1,30 @@
+
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”±ã²üÿÿÿÿ
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¬µäˆ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿñØÕÿÿÿÿÿ
+œ
+java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Œ…ëÄøÿÿÿÿ
+G
+java:S1068",Remove this unused "customer" private field.(íŸŞÛşÿÿÿÿ
+E
+java:S1068"*Remove this unused "seller" private field.(Ò§¸şúÿÿÿÿ
+E
+java:S1068"/Remove this unused "productName" private field.(…œ£ß
+N
+java:S1068"3Remove this unused "productCategory" private field.(›ÏÇûÿÿÿÿ
+F
+java:S1068	"0Remove this unused "productPrice" private field.(ÙËÓ½
+J
+java:S1068
+"/Remove this unused "productSize" private field.(ù¥í…ıÿÿÿÿ
+K
+java:S1068"0Remove this unused "productColor" private field.(ÄÂ­Éùÿÿÿÿ
+J
+java:S1068"/Remove this unused "productInfo" private field.(àªµ‚ıÿÿÿÿ
+K
+java:S1068"0Remove this unused "productStock" private field.(şº¡¸ÿÿÿÿÿ
+L
+java:S1068"1Remove this unused "productReview" private field.(µéÏÆøÿÿÿÿ

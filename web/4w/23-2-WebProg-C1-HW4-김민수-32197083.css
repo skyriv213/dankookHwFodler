@@ -1,0 +1,32 @@
+h1{
+    color: brown;
+    text-align: center;
+}
+body{
+    background-color: cadetblue
+}
+header{
+    border: 1px;
+}
+ol{
+    border: 1px;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-family: "휴먼 편지체";
+    size: 1em;
+    text-indent: 1em;
+    /* 들여쓰기 */
+}
+h2{
+    color: blue;
+    text-shadow: 4px;
+}
+footer{
+    background-color: orange;
+    /* 라운드 처리 */
+    border: 2px;
+    border-radius: 15px;
+}

@@ -1,0 +1,14 @@
+
+k	java:S116"VRename this field "ProductInfo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈàÑó
+i	java:S116"TRename this field "Orderdate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²«ö
+j	java:S116"URename this field "OrderPrice" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÌú
+o	java:S116"URename this field "OrderState" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ‘üÖûÿÿÿÿ
+E
+java:S1068"/Remove this unused "ProductInfo" private field.(ÈàÑó
+E
+java:S1068
+"*Remove this unused "seller" private field.(Ò§¸şúÿÿÿÿ
+G
+java:S1068",Remove this unused "customer" private field.(íŸŞÛşÿÿÿÿ
+B
+java:S1068",Remove this unused "products" private field.(ô¬´É

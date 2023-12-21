@@ -1,0 +1,17 @@
+
+t
+java:S1488"YImmediately return this expression instead of assigning it to the temporary variable "l".(Âºìıÿÿÿÿ
+w
+java:S1488"\Immediately return this expression instead of assigning it to the temporary variable "list".(Ø–Ûïøÿÿÿÿ
+w
+java:S1488"aImmediately return this expression instead of assigning it to the temporary variable "customers".(öøñŸ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(šøî²üÿÿÿÿ
+c	java:S100
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô÷Ğ¨
+Y
+java:S1172">Remove these unused method parameters "seller", "sortByQuery".(¥ÒÂÃüÿÿÿÿ
+E
+java:S1172"/Remove this unused method parameter "customer".(†½¹á
+H
+java:S1068"-Remove this unused "promotion" private field.(ø’ùùÿÿÿÿÿ

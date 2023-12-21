@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://i.namu.wiki/i/XrPt_0p-W217PeWEbZq3Fay8yUyjfy29UNNBF6yyLCHNVbBnXojS-YyYcc80Cjo1CQU-1f-SktxWFDRkh2erzpkt3McAnUlv1DVceRZfde7vehRZJ374JMkbW9V6znSJmxmSRmZWO7hzcsrphsJkUA.webp);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        div{
+            border-style: none;
+            /* font-size: ; */
+            color: white;
+            position: absolute; 
+        }
+    </style>
+    <script>
+        var width = screen.availWidth;
+        var height = screen.availHeight;
+        var snowcnt = 30;
+
+        function downPosition(){
+            var arr =  document.getElementsByTagName("div");
+            for(i = 0; i < arr.length; i++){
+                var newtop = arr[i].offsetTop + 10;
+                var offleft = arr[i].offsetLeft;
+
+                if (newtop > height){
+                    var ranloc = Math.floor(Math.random() * (width) + 1);
+                    var rantop =  Math.floor(Math.random() * (height) + 1);
+                    var newdiv = document.createElement("div");
+
+                    newdiv.style.left = ranloc + "px";
+                    newdiv.style.top = "0";  
+                    newdiv.innerHTML = "*";
+
+                    document.body.appendChild(newdiv);
+                } else {
+                    arr[i].style.top = newtop + "px";
+                }
+            }
+        }
+
+        function randomPosition(){
+            var text = "";
+            for (i = 0; i < snowcnt; i++){
+                var ranloc = Math.floor(Math.random() * (width) + 1);
+                var rantop = Math.floor(Math.random() * (height) + 1);
+
+                text += "<div style='left:" + ranloc + "px; top:" + rantop + "px;'>*</div>";
+            }
+            document.body.innerHTML += text;  
+        }
+
+    </script>
+</head>
+<body>
+    <script>
+        randomPosition();
+        setInterval(downPosition, 1500); 
+    </script>
+</body>
+</html>

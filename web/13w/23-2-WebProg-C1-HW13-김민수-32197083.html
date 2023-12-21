@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 단어장 만들기</title>
+    <script>
+        function storeWord() {
+            if (!window.localStorage) {
+                alert("지원하지 않습니다");
+            }
+            var english = document.getElementById("english").value.trim();
+            var korean = document.getElementById("korean").value.trim();
+            if (window.localStorage.getItem(english) != null) {
+                var res = confirm(english + " 수정하시겠습니까?");
+                if (!res) {
+                    return;
+                }
+            }
+            window.localStorage.setItem(english, korean);
+            document.getElementById("english").value = "";
+            document.getElementById("korean").value = "";
+        }
+
+        function searchWord() {
+            if (!window.localStorage) {
+                alert("지원하지 않습니다");
+                return;
+            }
+            var english = document.getElementById("english").value.trim();
+            var res = window.localStorage.getItem(english);
+            if (res == null) {
+                alert(english + " 존재하지 않습니다");
+                document.getElementById("korean").value = "";
+                return;
+            }
+            document.getElementById("korean").value = res;
+        }
+
+        function deleteWord() {
+            if (!window.localStorage) {
+                alert("지원하지 않습니다");
+                return;
+            }
+            var english = document.getElementById("english").value.trim();
+            if (localStorage.getItem(english) == null) {
+                alert("해당 단어는 존재하지 않습니다");
+                return;
+            }
+            localStorage.removeItem(english);
+            document.getElementById("english").value = "";
+            document.getElementById("korean").value = english + " 삭제되었습니다";
+        }
+
+        function viewAll() {
+            var win = window.open("23-2-WebProg-C1-HW13-김민수-32197083-wordView.html", "wordView");
+        }
+    </script>
+</head>
+<body>
+    <h3>나의 단어장 만들기</h3>
+    <hr>
+    <form>
+        <table>
+            <tr>
+                <td>영어 <input id="english" type="text" value="" /></td>
+                <td>한글 <input id="korean" type="text" value="" /></td>
+                <td><button type="button" onclick="storeWord()">단어 저장</button></td>
+                <td><button type="button" onclick="searchWord()">영단어 검색</button></td>
+                <td><button type="button" onclick="deleteWord()">단어 삭제</button></td>
+                <td><button type="button" onclick="viewAll()">전체보기</button></td>
+            </tr>
+        </table>
+    </form> 
+</body>
+</html>

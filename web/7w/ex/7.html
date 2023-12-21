@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            width: 60px;
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var color = ["maroon","red","blue"];
+        document.write(color.length+"개의 css2 색이름과 색 <hr>")
+        for(var i = 0 ; i < color.length;i++){
+            var str = "<div style = 'background-color:";
+            str+=color[i];
+            str+="'/>"+color[i]+"</div>" 
+            document.write(str);
+        }
+    </script>
+    
+</body>
+</html>

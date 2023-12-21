@@ -1,0 +1,26 @@
+
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(××¨åúÿÿÿÿ
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÇØòÌ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Â¡¨Œûÿÿÿÿ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†Æõùúÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(××¨åúÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇØòÌ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¡¨Œûÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Æõùúÿÿÿÿ
+?
+java:S1068"*Remove this unused "userId" private field.(íÃË
+G
+java:S1068",Remove this unused "password" private field.(œãë­úÿÿÿÿ
+>
+java:S1068"(Remove this unused "name" private field.(Ë¥¼
+D
+java:S1068")Remove this unused "birth" private field.(¶’Œûÿÿÿÿ
+D
+java:S1068	")Remove this unused "email" private field.(ª«Õìùÿÿÿÿ
+J
+java:S1068
+"/Remove this unused "phoneNumber" private field.(Ôá“ùÿÿÿÿ

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        큰 자리 수와 작은 자리 수의 숫자가 같은지 비교
+    </h3>
+    <hr>
+    <script>
+        var s = prompt("숫자를 입력하시오")
+        if (isFinite(s)){
+            var n = parseInt(s)
+       
+        if(n>0){
+            var least =  n%10;
+            var most =  0
+            while(n!=0){
+                most = n%10;
+                n = Math.floor(n/10);
+            }
+            if(most == least){
+                document.write(s + ": 같음")
+            }else{
+                document.write(s+" : 다름")
+            }
+        }else{
+            document.write(s+"해당 수는 양수가 아닙니다")
+        }
+        }else{
+            document.write(s+"숫자가 아니에요~")
+        }
+    </script>
+</body>
+</html>

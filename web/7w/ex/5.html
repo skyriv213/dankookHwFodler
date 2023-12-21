@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var names  = new Array("wonsun","jaemoonlee","kitae","gracehwang");
+        document.write("<hr>")
+        for(var i = 0 ;i<names.length;i++){
+            document.write(names[i]+"\n")
+        }
+        document.write("<hr>")
+        var temp=names[0];
+        for(var i = 0;i<names.length;i++){
+            if(names[i].length>temp.length){
+                temp = names[i];
+            }
+        }
+        document.write(temp)
+        document.write("<hr>")
+        for(var i = 0 ; i < names.length;i++){
+            if(names[i]<temp){
+                temp = names[i];
+            }
+        }
+        document.write(temp)
+        document.write("<hr>")
+        for(var i = 0;i<names.length;i++){
+            for(var j = i;j<names.length;j++){
+                if (names[i]>names[j]){
+                    temp = names[i];
+                    names[i]= names[j];
+                    names[j]= temp;
+                }
+            }
+        }
+        for(var i = 0 ;i<names.length;i++){
+            document.write(names[i]+"\n")
+        }
+    </script>
+</body>
+</html>

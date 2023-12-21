@@ -1,0 +1,38 @@
+h1{
+    color: brown;
+}
+
+header{
+    background-color: aquamarine;
+    border: 3px;
+    top:220px;
+    text-align: center;
+}
+body{
+    background-color: darkcyan;
+}
+
+form{
+    
+    background-color: cadetblue;
+    border: 2px;
+    display: inline-block;
+    padding-right: 200px;
+    padding-left: 200px;
+    margin-left: 10%;
+    position: static;
+    
+}
+pre{
+    color: rgba(146, 10, 167, 0.585);
+}
+footer{
+    background-color: royalblue;
+    color: white;
+    display:block;
+    top: 20px;
+    margin: auto;
+    text-align: center;
+    border: 2px;
+    border-radius: 20px;
+}

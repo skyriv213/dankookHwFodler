@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>ch3 설문조사</title>
+    <link href="23-2-WebProg-C1-HW4-김민수-32197083-Survey.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1>설문지</h1>
+    <hr>
+    </header>
+    <form>
+        
+        학년 : <label><input type="radio" name="year" value="1">1학년</label> <label><input type="radio" name="year" value="2">2학년</label> <label><input type="radio" name="year" value="3">3학년</label> <label><input type="radio" name="year" value="4">4학년</label> 
+         <br>
+        성별 : <label><input type="radio" name="sex" value="man">남</label> <label><input type="radio" name="sex" value="woman">여</label> <br>
+        관심분야 : <select name="major">
+            <option value="1" selected>소프트웨어학과</option>
+            <option value="2" >모바일시스템공학과</option>
+            <option value="3" >컴퓨터공학과</option>
+        </select>
+        <br>
+        진로 : <label><input type="checkbox" value="1">학업</label>
+        <label><input type="checkbox" value="2"> 창업 </label><label> <input type="checkbox" value="3">개발</label><label> <input type="checkbox" value="4">영업</label> <br>
+        남기고 싶은 말 : <textarea cols="20" rows="5">이곳에 남길 말 작성</textarea><br>
+        <button type="submit">설문조사 완료</button>
+    </form>
+    <footer>
+        <p>23-2-webProgramming</p>
+    </footer>
+</body>
+</html>

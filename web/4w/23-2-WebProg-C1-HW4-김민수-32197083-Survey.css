@@ -1,0 +1,22 @@
+h1{
+    color: brown;
+}
+/* hr{ */
+/* } */
+header{
+    background-color: aquamarine;
+    border: 3px;
+}
+form{
+    background-color: cadetblue;
+    border: 2px;
+}
+pre{
+    color: rgba(146, 10, 167, 0.585);
+}
+footer{
+    background-color: royalblue;
+    color: white;
+    border: 2px;
+    border-radius: 20px;
+}

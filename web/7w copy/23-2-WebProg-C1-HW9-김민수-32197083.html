@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      div{
+        display: inline-block;
+        height : 50px;
+        padding : 0px;
+        font : italic 50px consolas, sans-serif;
+        color : blue;
+        text-align : center;
+        background : linen;
+
+      }
+      #res{
+        height: 50px;
+        color: black;
+      }
+    </style>
+    <script>
+        var arr =  [0,0,0];
+        var tf = true;
+        function random(obj){
+            if(tf == false){
+                return;
+            }
+            var n = Math.floor(Math.random()*3);
+            obj.innerHTML = n;
+            if(obj.id =="first"){
+                arr[0] = n;
+            }else if(obj.id == "second"){
+                arr[1] = n;
+            }else{
+                arr[2] = n;
+                var res = document.getElementById("res");
+                if(arr[0]==arr[1]&&arr[0]==arr[2]){
+                    console.log
+                    res.innerHTML = "Success(click here to do again)";				}
+				else{
+                    res.innerHTML = "fail(click here to do again)";                
+                }
+                tf = false;
+            }   
+        }
+        function reset(){
+            arr = [0,0,0]
+            tf = true;
+            document.getElementById("first").innerHTML =0;
+            document.getElementById("second").innerHTML =0;
+            document.getElementById("third").innerHTML = 0;
+            document.getElementById("res").innerHTML = "";
+        }
+    </script>
+
+</head>
+
+<body>
+    <h3>
+        갬블링 게임
+    </h3>
+    <p>
+        각 숫자를 클릭하면 0에서 2 사이의 난수로 바뀝니다. <br>
+        모든 같은 수가 나오면 승리힙니다.
+    </p>
+    <hr>
+    <div class="game">
+        <div id ="first" onclick="random(event.target)">0</div>
+        <div id ="second" onclick="random(event.target)">0</div>
+        <div id ="third" onclick="random(event.target)">0</div>
+    </div>
+    <hr>
+	<p id="res" onclick="reset()"></p>
+</body>
+</html>

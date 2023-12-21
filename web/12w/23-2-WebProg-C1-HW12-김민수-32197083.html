@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점 별로 학생 수 파이 차트</title>
+</head>
+<body>
+    <h3>학점 별로 학생 수를 입력하면 파이 차트로 비율 그리기</h3>
+    <hr>
+    <form>
+        <table>
+            <tr>
+                <td>A <input id="A" type="number" value="0" /></td>
+                <td>B <input id="B" type="number" value="0" /></td>
+                <td>C <input id="C" type="number" value="0" /></td>
+            </tr>
+            <tr>
+                <td>D <input id="D" type="number" value="0" /></td>
+                <td>F <input id="F" type="number" value="0" /></td>
+                <td><button type="button" onclick="drawChart()">차트 그리기</button></td>
+            </tr>
+        </table>
+    </form>
+    <canvas id="myCanvas" style="background-color: aliceblue;" width="650" height="450"></canvas>
+    <script>
+        var colors = ["blue", "green", "yellow", "magenta", "red"];
+        var grades = ["A", "B", "C", "D", "F"];
+
+        function drawChart() {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            var tot = 0;
+            var i;
+            var s = [];
+            var a = document.getElementById("A");
+            var b = document.getElementById("B");
+            var c = document.getElementById("C");
+            var d = document.getElementById("D");
+            var f = document.getElementById("F");
+            s.push(a.value);
+            s.push(b.value);
+            s.push(c.value);
+            s.push(d.value);
+            s.push(f.value);
+            for (i = 0; i < s.length; i++) {
+                tot += parseInt(s[i]);
+            }
+
+            for (i = 0; i < s.length; i++) {
+                context.fillText(grades[i] + " 학점 " + (parseInt(s[i]) / tot * 100).toFixed(0) + "%: " + colors[i], 10, 30 + 20 * i);
+            }
+
+            var sangle = 0;
+            for (i = 0; i < s.length; i++) {
+                context.beginPath();
+                context.moveTo(canvas.width / 2, canvas.height / 2);
+                eAngle = sangle + (Math.PI * 2) * (parseInt(s[i]) / tot);
+                context.arc(canvas.width / 2, canvas.height / 2, 200, sangle, eAngle);
+                context.closePath();
+                context.fillStyle = colors[i];
+                context.fill();
+                sangle = eAngle;
+            }
+        }
+    </script>
+</body>
+</html>

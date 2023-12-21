@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>마우스 클릭 연습</title>
+    <style>
+        table {
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid blue;
+            width: 80px;
+            height: 80px;
+            padding: 0px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+    <script>
+        var select = 0; // 선택된 셀 번호
+        var img = new Image();
+
+        function set() {
+            var table = document.getElementById("t");
+
+            for (var i = 0; i < 10; i++) {
+                var row = document.createElement("tr");
+
+                for (var j = 0; j < 10; j++) {
+                    var col = document.createElement("td");
+                    col.innerHTML = "<img src=' ' onclick='moveImage(this)'>"
+                    row.appendChild(col);
+                }
+                table.appendChild(row);
+            }
+
+            moveImage(); // 초기 이미지 설정
+        }
+
+        function moveImage(clickedImg) {
+        
+            document.images[select].src = " ";
+
+            // 0~99 사이의 랜덤한 셀을 선택
+            select = Math.floor(Math.random() * 100);
+
+            img.src = "https://ogq-sticker-global-cdn-z01.afreecatv.com/sticker/16f23c7a0202e66/main.png"; // 45x45 크기. 미리 로딩
+            document.images[select].src = img.src;
+            
+        }
+    </script>
+</head>
+<body onload="set()">
+    <h3>마우스 클릭 연습하기</h3>
+    <hr>
+    <table id="t"></table>
+</body>
+</html>

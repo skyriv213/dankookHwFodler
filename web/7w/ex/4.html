@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>방문 시간에 따라 변하는 배경색</title>
+</head>
+<body>
+<h3>일요일pink, 다른요일 gold</h3>
+<hr>
+<script>
+	let current = new Date(); // 현재 시간 값을 가진 Date 객체 생성
+    var time = current.getDay();
+	if(time <=6)
+		document.body.style.backgroundColor = "gold";
+	else{
+		document.body.style.backgroundColor = "pink";
+    }
+	document.write("현재 시간 : ");
+	document.write(current.getHours(), "시,");
+	document.write(current.getMinutes(), "분,");
+	document.write(current.getSeconds(), "초<br>");
+</script>
+</body>
+</html>

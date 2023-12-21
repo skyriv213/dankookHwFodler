@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ch3-컴퓨터 기술 소개</title>
+        <link rel="stylesheet" href="23-2-WebProg-C1-HW4-김민수-32197083.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <audio id="music" src="https://drive.google.com/file/d/18toF3QQoUO9xK4HcLjq59dW_CdJQWEnM/view?usp=sharing" controls loop>해당 브라우저에는 지원하지않습니다</audio>
+            <h1>문맥교환</h1>
+            <p>
+                웹 프로그래밍 과제를 진행하면서 이전에 배웠던 문맥교환에 관한 내용을 다시 한 번
+                복기할 겸 이번 과제의 주제로 정했다.
+            </p>
+            <hr>
+        </header>
+        <nav>
+            <h2>목차</h2>
+            <ol type="1">
+                <li><a href="#describe">문맥교환이란?</a></li>
+                <li><a href="#time">발생 시점</a></li>
+                <li><a href="#example">예시</a></li>
+                <li><a href="#posneg">장단점</a></li>
+                <li><a href="#music">음악 컨트롤러</a></li>
+            </ol>
+        </nav>
+        <section>
+        <hr>
+            <nav>
+                <article id="describe">
+                    <h3><a href="https://ko.wikipedia.org/wiki/%EB%AC%B8%EB%A7%A5_%EA%B5%90%ED%99%98">문맥교환이란?</a></h3>
+                
+            </nav>
+                <p>
+                    하나의 프로세스가 CPU를 사용 중인 상태에서 다른 프로세스가 CPU를 사용하도록 하기 위해, <br>
+                    이전의 프로세스의 상태(문맥)을 보관하고 새로운 프로세스의 상태를 적재하는 작업을 말함
+                </p>
+                <hr>
+                </article> 
+      
+        <article id="time"></article>
+        <h3 id="time">발생 시점</h3>
+        <p>
+            <ul>
+            <strong>멀티테스킹</strong>
+                <li>
+                    실행 가능한 프로세스들이 운영체제의 스케줄러에 의해 번갈아가며 수행
+                </li>
+                <li>
+                    번갈아 가면서 프로세스가 CPU를 할당 받는데 이때 context switching이 발생한다
+                </li>
+                <br>
+            <strong>인터럽트 핸들링</strong>
+                <li>예외 상황 발생 시 CPU에게 해당 사항을 알리고 처리하는 것</li>
+                <li>해당 인터럽트가 발생 시 문맥교환이 실행</li>
+                <br>
+            <strong>사용자와 커널 모드 전환</strong>
+            <li>사용자와 커널 모드 전환은 문맥교환이 필수가 아니지만 운영체제에 따라 발생할 수 있다</li>
+            </ul>
+        </p>
+        <br>
+        <hr>
+    </article>
+        <article id=""example>
+        <h3 id="example">예시 및 사진</h3>
+        <figure>
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmE1vG%2FbtqBZqwB1lx%2FxLbGO5IhI1RHAyemQPARI0%2Fimg.png" width="500" height="300">
+            <figcaption>예시 이미지</figcaption>
+        </figure>
+        <ol type="1">
+            <li>P1이 실행되는 도중 인터럽트 or 시스템 콜 발생</li><br>
+            <li>ProcessControlBlock(PCB)에 해당 P1의 정보를 저장</li><br>
+            <li>실행하고자 하는 P2의 상태를 불러옴</li><br>
+            <li>P2의 실행</li><br>
+            <li>P2가 실행이 되다가 다시 인터럽트 or 시스템콜 발생</li><br>
+            <li>PCB에 다시 P2의 정보를 저장</li><br>
+            <li>P1을 다시 해당 PCB에서 불러와서 실행</li><br>
+        </ol>
+        <br>
+        <hr>
+    </article>
+        <article id="posneg">
+        <h3 id="posneg">문맥교환 장단점</h3>
+        <table border="1">
+            <caption>문맥교환의 장단점</caption>
+            <thead>
+                <tr>
+                    <th>장점</th>
+                    <th>단점</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>여러 개의 프로세스를 동시에 실행하여<br> 멀티태스킹을 가능하게 함</td>
+                    <td>문맥교환은 기본적으로 오버헤드가 발생하여<br> 성능 저하의 문제가 발생할 수 있음<br>
+                        문맥교환의 시간이 길어지면 시스템 응답 시간이<br> 늦어질 수 있음
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    </section>
+        <hr>
+        <footer>
+            <p>23.09.18</p>
+            <p><a href="./23-2-WebProg-C1-HW4-김민수-32197083-Survey.html">설문조사</p>
+            
+        </footer>
+    </body>
+</html>

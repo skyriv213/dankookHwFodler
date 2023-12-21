@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = new Array(5);
+        for(var i = 0;i<5;i++){
+            var v = prompt("콤마로 분리하여 책제목 저자 가격 순으로 입력");
+            var str = v.split(",");
+            var book = new Object();
+        book.name =  str[0];
+        book.author = str[1];
+        book.price = str[2];
+        arr[i] = book
+        }
+        max = arr[0];
+        for(var i = 0 ;i< arr.length;i++){
+            if(max.price < arr[i].price){
+                max =  arr[i]
+            }
+        }
+        
+        document.write("book :")
+        document.write("<br>");
+        document.write("book.name"+ max.name);
+        document.write("<br>");
+
+        document.write("book.author"+ max.author);
+        document.write("<br>");
+
+        document.write("book.price"+ max.price);
+    </script>
+</body>
+</html>

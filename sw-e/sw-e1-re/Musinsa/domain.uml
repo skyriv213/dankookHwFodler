@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.musinsa.domain</OriginalElement>
+  <nodes>
+    <node x="-166.0" y="345.5">com.example.musinsa.domain.Promotion</node>
+    <node x="734.9342105263158" y="-62.5">com.example.musinsa.domain.Delivery</node>
+    <node x="750.7088815789473" y="-367.0">com.example.musinsa.domain.Customer</node>
+    <node x="463.93421052631584" y="-166.0">com.example.musinsa.domain.Product</node>
+    <node x="55.18421052631584" y="-656.5">com.example.musinsa.domain.Coupon</node>
+    <node x="938.875" y="-691.0">com.example.musinsa.domain.User</node>
+    <node x="594.5592105263158" y="917.0">com.example.musinsa.domain.Community</node>
+    <node x="361.68421052631584" y="742.0">com.example.musinsa.domain.Seller</node>
+    <node x="762.1430921052631" y="288.0">com.example.musinsa.domain.Order</node>
+    <node x="341.1842105263158" y="-656.5">com.example.musinsa.domain.CustomerService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.musinsa.domain.Community" target="com.example.musinsa.domain.Customer" relationship="TO_MANY">
+      <point x="0.0" y="-119.5" />
+      <point x="746.5592105263158" y="891.0" />
+      <point x="1025.4736842105262" y="891.0" />
+      <point x="1025.4736842105262" y="-193.0" />
+      <point x="905.2088815789473" y="-193.0" />
+      <point x="0.0" y="73.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Delivery" target="com.example.musinsa.domain.Customer" relationship="TO_ONE">
+      <point x="0.0" y="-96.5" />
+      <point x="857.9342105263158" y="-193.0" />
+      <point x="905.2088815789473" y="-193.0" />
+      <point x="0.0" y="73.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Customer" target="com.example.musinsa.domain.Coupon" relationship="TO_MANY">
+      <point x="-77.25" y="-73.5" />
+      <point x="827.9588815789473" y="-388.0" />
+      <point x="387.8930921052631" y="-388.0" />
+      <point x="387.8930921052631" y="-408.0" />
+      <point x="188.18421052631578" y="-408.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.CustomerService" target="com.example.musinsa.domain.Customer" relationship="TO_ONE">
+      <point x="0.0" y="96.5" />
+      <point x="433.68421052631584" y="-398.0" />
+      <point x="387.8930921052631" y="-398.0" />
+      <point x="387.8930921052631" y="-388.0" />
+      <point x="827.9588815789473" y="-388.0" />
+      <point x="-77.25" y="-73.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Customer" target="com.example.musinsa.domain.CustomerService" relationship="TO_MANY">
+      <point x="-77.25" y="-73.5" />
+      <point x="827.9588815789473" y="-388.0" />
+      <point x="387.8930921052631" y="-388.0" />
+      <point x="387.8930921052631" y="-398.0" />
+      <point x="433.68421052631584" y="-398.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Customer" target="com.example.musinsa.domain.Order" relationship="TO_MANY">
+      <point x="0.0" y="73.5" />
+      <point x="905.2088815789473" y="-193.0" />
+      <point x="991.4342105263158" y="-193.0" />
+      <point x="991.4342105263158" y="256.0" />
+      <point x="884.1430921052631" y="256.0" />
+      <point x="0.0" y="-200.0" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Seller" target="com.example.musinsa.domain.Product" relationship="TO_MANY">
+      <point x="-77.25" y="-61.5" />
+      <point x="438.93421052631584" y="710.0" />
+      <point x="589.4342105263158" y="710.0" />
+      <point x="0.0" y="200.0" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Promotion" target="com.example.musinsa.domain.Coupon" relationship="TO_MANY">
+      <point x="0.0" y="-142.5" />
+      <point x="21.0" y="-388.0" />
+      <point x="188.18421052631584" y="-388.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Community" target="com.example.musinsa.domain.Seller" relationship="TO_MANY">
+      <point x="0.0" y="-119.5" />
+      <point x="746.5592105263158" y="891.0" />
+      <point x="516.1842105263158" y="891.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Product" target="com.example.musinsa.domain.Seller" relationship="TO_ONE">
+      <point x="0.0" y="200.0" />
+      <point x="589.4342105263158" y="710.0" />
+      <point x="438.93421052631584" y="710.0" />
+      <point x="-77.25" y="-61.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Seller" target="com.example.musinsa.domain.User" relationship="GENERALIZATION">
+      <point x="77.25" y="-61.5" />
+      <point x="593.4342105263158" y="720.0" />
+      <point x="1110.75" y="720.0" />
+      <point x="1110.75" y="-388.0" />
+      <point x="1066.875" y="-388.0" />
+      <point x="0.0" y="131.0" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Order" target="com.example.musinsa.domain.Seller" relationship="TO_ONE">
+      <point x="0.0" y="200.0" />
+      <point x="884.1430921052631" y="710.0" />
+      <point x="438.93421052631584" y="710.0" />
+      <point x="-77.25" y="-61.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Order" target="com.example.musinsa.domain.Product" relationship="TO_MANY">
+      <point x="0.0" y="-200.0" />
+      <point x="884.1430921052631" y="266.0" />
+      <point x="589.4342105263158" y="266.0" />
+      <point x="0.0" y="200.0" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Coupon" target="com.example.musinsa.domain.Seller" relationship="TO_ONE">
+      <point x="0.0" y="96.5" />
+      <point x="188.18421052631584" y="-388.0" />
+      <point x="218.5" y="-388.0" />
+      <point x="218.5" y="710.0" />
+      <point x="438.93421052631584" y="710.0" />
+      <point x="-77.25" y="-61.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Seller" target="com.example.musinsa.domain.Promotion" relationship="TO_MANY">
+      <point x="-77.25" y="-61.5" />
+      <point x="438.93421052631584" y="710.0" />
+      <point x="21.0" y="710.0" />
+      <point x="0.0" y="142.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Customer" target="com.example.musinsa.domain.Product" relationship="TO_MANY">
+      <point x="0.0" y="73.5" />
+      <point x="905.2088815789473" y="-193.0" />
+      <point x="589.4342105263158" y="-193.0" />
+      <point x="0.0" y="-200.0" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Customer" target="com.example.musinsa.domain.User" relationship="GENERALIZATION">
+      <point x="77.25" y="-73.5" />
+      <point x="982.4588815789473" y="-388.0" />
+      <point x="1066.875" y="-388.0" />
+      <point x="0.0" y="131.0" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Order" target="com.example.musinsa.domain.Customer" relationship="TO_ONE">
+      <point x="0.0" y="-200.0" />
+      <point x="884.1430921052631" y="256.0" />
+      <point x="991.4342105263158" y="256.0" />
+      <point x="991.4342105263158" y="-193.0" />
+      <point x="905.2088815789473" y="-193.0" />
+      <point x="0.0" y="73.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Product" target="com.example.musinsa.domain.Customer" relationship="TO_ONE">
+      <point x="0.0" y="-200.0" />
+      <point x="589.4342105263158" y="-193.0" />
+      <point x="905.2088815789473" y="-193.0" />
+      <point x="0.0" y="73.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Promotion" target="com.example.musinsa.domain.Seller" relationship="TO_ONE">
+      <point x="0.0" y="142.5" />
+      <point x="21.0" y="710.0" />
+      <point x="438.93421052631584" y="710.0" />
+      <point x="-77.25" y="-61.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Order" target="com.example.musinsa.domain.Delivery" relationship="TO_ONE">
+      <point x="0.0" y="-200.0" />
+      <point x="884.1430921052631" y="256.0" />
+      <point x="857.9342105263158" y="256.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Delivery" target="com.example.musinsa.domain.Order" relationship="TO_ONE">
+      <point x="0.0" y="96.5" />
+      <point x="857.9342105263158" y="256.0" />
+      <point x="884.1430921052631" y="256.0" />
+      <point x="0.0" y="-200.0" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Seller" target="com.example.musinsa.domain.Order" relationship="TO_MANY">
+      <point x="-77.25" y="-61.5" />
+      <point x="438.93421052631584" y="710.0" />
+      <point x="884.1430921052631" y="710.0" />
+      <point x="0.0" y="200.0" />
+    </edge>
+    <edge source="com.example.musinsa.domain.Seller" target="com.example.musinsa.domain.CustomerService" relationship="TO_MANY">
+      <point x="-77.25" y="-61.5" />
+      <point x="438.93421052631584" y="-408.0" />
+      <point x="433.68421052631584" y="-408.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="com.example.musinsa.domain.CustomerService" target="com.example.musinsa.domain.Seller" relationship="TO_ONE">
+      <point x="0.0" y="96.5" />
+      <point x="433.68421052631584" y="-408.0" />
+      <point x="438.93421052631584" y="-408.0" />
+      <point x="-77.25" y="-61.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5914224756067253" showDependencies="true" x="1104.7034648213664" y="71.42889026787634" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

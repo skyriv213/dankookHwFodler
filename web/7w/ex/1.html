@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = [];
+        for(var i = 0; i < 10;i++){
+            n[i] =  Math.floor(Math.random()*99)+1;
+        }
+
+        for(var i = 0; i< n.length;i++){
+            document.write(n[i]+"\n");
+        }
+        document.write("<hr>");
+        var big = n[0];
+        for(var i = 0 ; i< n.length;i++){
+            if(big<n[i]){
+                big =  n[i];
+            }
+        }      
+        document.write("제일 큰 수는 : "+big+"입니다");
+        document.write("<hr>");
+        for(var i = 0 ; i< n.length;i++){
+            for(var j = 0; j<n.length;j++){
+                if(n[i]<n[j]){
+                    var t = n[i];
+                    n[i] = n[j];
+                    n[j] = t;
+                }
+            }
+        }
+        for(var i = 0 ; i< n.length;i++){
+            document.write(n[i]+ " \n");
+        }
+
+    </script>
+</body>
+</html>

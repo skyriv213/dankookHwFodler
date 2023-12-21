@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>eval()로 수식 계산</h3>
+    <hr>
+    <script>
+        var n  = prompt("수식을 입력하시오")
+        var ans =  eval(n)
+        if(ans==NaN){
+            document.write(n+"의 결과는 숫자가 아니다")
+        }else{
+            document.write(n+"의 답은 "+ans)
+        }
+    </script>
+</body>
+</html>

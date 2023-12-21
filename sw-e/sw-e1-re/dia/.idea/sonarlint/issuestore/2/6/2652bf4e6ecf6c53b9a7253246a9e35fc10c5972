@@ -1,0 +1,37 @@
+
+w
+java:S1488"\Immediately return this expression instead of assigning it to the temporary variable "list".(Ø–Ûïøÿÿÿÿ
+~
+java:S1488)"cImmediately return this expression instead of assigning it to the temporary variable "productList".(È·ÙÁøÿÿÿÿ
+w
+java:S14880"aImmediately return this expression instead of assigning it to the temporary variable "customers".(öøñŸ
+p	java:S116"VRename this field "PromotionId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú‰¦ÿÿÿÿÿ
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ºœ‰ª
+œ
+java:S1186$"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(îã‚²şÿÿÿÿ
+œ
+java:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(šøî²üÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(•ñ®Šüÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(¶èÜ·ûÿÿÿÿ
+T
+java:S1172">Remove these unused method parameters "seller", "sortByQuery".(îÍŠ¹
+H
+java:S1172 "-Remove this unused method parameter "seller".(üÀ•¹ûÿÿÿÿ
+C
+java:S1172("-Remove this unused method parameter "seller".(ÙÏş
+J
+java:S1172/"/Remove this unused method parameter "customer".(Àçîœşÿÿÿÿ
+S
+java:S11170"=Rename "customers" which hides the field declared at line 16.(öøñŸ
+J
+java:S1068"/Remove this unused "PromotionId" private field.(Ú‰¦ÿÿÿÿÿ
+J
+java:S1068
+"/Remove this unused "dateExpired" private field.(Œ¡ùÍüÿÿÿÿ
+G
+java:S1068"2Remove this unused "statePromotion" private field.(‚ÿ„)
+@
+java:S1068"*Remove this unused "seller" private field.(åã¸‚
+H
+java:S1068"-Remove this unused "customers" private field.(åŒôøüÿÿÿÿ

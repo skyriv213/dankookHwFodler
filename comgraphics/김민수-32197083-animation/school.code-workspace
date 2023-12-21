@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../school"
+		},
+		{
+			"path": "../../../Downloads/WebGL-Animation-hw-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "school"
+	}
+}

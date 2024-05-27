@@ -32,9 +32,12 @@ OS -1
 4. 1-3 반복
 '''
 import random
+import time
 from enum import Enum
 from collections import deque
+import matplotlib.pyplot as plt
 
+process_state_records = []
 
 class ProcessState(Enum):
     RUNNING = "Running"
@@ -51,66 +54,91 @@ class Process:
 
     def changeStateRunning(self):
         self.state = ProcessState.RUNNING
+        time.sleep(0.1)
+
 
     def changeStateReady(self):
         self.state = ProcessState.READY
+        time.sleep(0.1)
+
 
     def changeStateFinished(self):
         self.state = ProcessState.FINISHED
+        time.sleep(0.1)
+
 
     def changeExecuteTime(self, timeslice):
         self.executionTime = self.executionTime - timeslice
+
+    def record_state(self, time):
+        process_state_records.append((self.processId, self.state.value, time))
 
 
 # 프로세스 리스트 생성
 def makeProcessors(ReadyQueue):
     for i in range(1, 10, 1):
-        if(1<=i<5):
-            execTime = random.randint(1, 8)
+        if (i % 2 == 0):
+            execTime = i * i
         else:
-            execTime = random.randint(7,17)
-        process = Process(processId=i, executionTime=execTime, priorityNum=10 - i)
+            execTime = i
+        process = Process(processId= i, executionTime=execTime, priorityNum=10 - i)
         ReadyQueue.append(process)
 
 
-def startRoundRobin(readyQueue,finishedQueue ):
-    # 종료된 프로세스가 들어갈 큐
-    # 타임 슬라이스 : 정해진 시간
-    timeSlice = 2
-    while True:
-        if len(readyQueue)==0:
-            break
+def startRoundRobin(readyQueue):
+    timeSlice = 10
+    time_count = 0
+    while readyQueue:
+        process = readyQueue.popleft()
+        process.changeStateRunning()
+        process.record_state(time_count)
+        time_count += timeSlice
+        if process.executionTime <= timeSlice:
+            process.executionTime = 0
+            process.changeStateFinished()
+            process.record_state(time_count)
         else:
-            process = readyQueue.popleft()
-            process.changeStateRunning()
-            time = process.executionTime
+            process.changeExecuteTime(timeSlice)
+            process.changeStateReady()
+            process.record_state(time_count)
+            readyQueue.append(process)
 
-            if (time - timeSlice) <= 0:
-                process.executionTime = 0
-                process.changeStateFinished()
-                finishedQueue.append(process)
 
-            else:
-                process.changeExecuteTime(timeSlice)
-                process.changeStateReady()
-                readyQueue.append(process)
+def plot_process_states(size_process):
+    # 각 프로세스의 실행 상태를 그래프로 표현
+    for processId, state, time in process_state_records:
+        plt.plot([time, time + 10], [processId, processId],
+                 color='blue'
+                 if state == 'Running' else 'green' if state == 'Ready' else 'red',
+                 linewidth=3)
 
-def startWorking():
-    # Use a breakpoint in the code line below to debug your script.
+    plt.xlabel('Time')
+    plt.ylabel('Process ID')
+    plt.title('Process Execution States')
+    plt.yticks(range(1, size_process + 1), [f'P{i}' for i in range(1, size_process + 1)])
+    plt.grid(axis='x')
+    plt.legend()  # 범례 생성
+    plt.show()
+
+
+def startRoundRobinWorking():
     print("Processor simulation is start now")  # Press ⌘F8 to toggle the breakpoint.
+    # ready, finish 큐 구현
     readyQueue = deque([])
+    #
     makeProcessors(readyQueue)
     print("check about processor")
+    size_process = len(readyQueue)
+
     for i in readyQueue:
         print(i.processId, i.executionTime)
     print("We make processes and we start round robin scheduler")
-    finishedQueue = deque([])
-    startRoundRobin(readyQueue,finishedQueue)
-    for i in finishedQueue:
-        print(i.processId, i.executionTime)
+    startRoundRobin(readyQueue)
+    plot_process_states(size_process)
+
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    startWorking()
+    startRoundRobinWorking()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
